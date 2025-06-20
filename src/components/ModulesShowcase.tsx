@@ -1,6 +1,5 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
 
 const ModulesShowcase = () => {
   const moduleCategories = [
@@ -11,27 +10,21 @@ const ModulesShowcase = () => {
           name: "Daily Journal", 
           description: "Record your thoughts and reflections with guided prompts",
           images: [
-            "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
+            "/lovable-uploads/cccc6b71-de09-41b4-abf4-a4371d73da2b.png"
           ]
         },
         { 
           name: "Weekly Rhythm", 
           description: "Plan and review your weekly priorities and goals",
           images: [
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop"
+            "/lovable-uploads/9d4339cc-fb5a-413e-8500-be791ea4f20f.png"
           ]
         },
         { 
           name: "Habit Tracker", 
           description: "Track your daily habits and build consistency",
           images: [
-            "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"
+            "/lovable-uploads/c3622682-2d1c-4c45-b8f8-8041feb87e52.png"
           ]
         }
       ]
@@ -43,27 +36,21 @@ const ModulesShowcase = () => {
           name: "To-do List", 
           description: "A simple and easy-to-use to-do list, like a piece of paper",
           images: [
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+            "/lovable-uploads/0571b04f-4bf8-48a9-bc01-f5c9a7bd7921.png"
           ]
         },
         { 
           name: "Weekly Design Sprint", 
           description: "Plan and track your weekly activities with a design focus",
           images: [
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+            "/lovable-uploads/7f9297e4-9626-4110-aa40-e4f49f32c644.png"
           ]
         },
         { 
           name: "Project Management", 
           description: "Organize and track your projects from start to finish",
           images: [
-            "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"
           ]
         }
       ]
@@ -75,18 +62,14 @@ const ModulesShowcase = () => {
           name: "Personal Finance", 
           description: "Track income, expenses, and manage your budget",
           images: [
-            "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+            "/lovable-uploads/77ac6f1e-3107-4af0-8b84-f0a8422a9786.png"
           ]
         },
         { 
           name: "Bucket List", 
           description: "Create and manage your life goals and dreams",
           images: [
-            "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"
+            "/lovable-uploads/fb01924f-66c7-4fda-8487-e54bcf8de069.png"
           ]
         }
       ]
@@ -98,45 +81,35 @@ const ModulesShowcase = () => {
           name: "Manifestation", 
           description: "Set intentions and track your manifestation journey",
           images: [
-            "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
+            "/lovable-uploads/7ac55d26-5d6c-494e-96d7-5ec52c97e77a.png"
           ]
         },
         { 
           name: "Five Percent Review", 
           description: "Track and review your progress with 5% improvements",
           images: [
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop"
+            "/lovable-uploads/e164c680-f89b-4000-9e69-878b4194a114.png"
           ]
         },
         { 
           name: "Future Me", 
           description: "Send letters to your future self for reflection and growth",
           images: [
-            "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"
+            "/lovable-uploads/295e0ebc-d09f-4915-9d23-6121b91205d6.png"
           ]
         },
         { 
           name: "Ikigai", 
           description: "Discover your life's purpose by exploring your ikigai",
           images: [
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
           ]
         },
         { 
           name: "Dreamboard", 
           description: "Create a visual dream board with drawings, texts, and images",
           images: [
-            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
           ]
         }
       ]
@@ -180,21 +153,29 @@ const ModulesShowcase = () => {
                   <div key={moduleIndex} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
                     {/* Image Slideshow */}
                     <div className="h-48 bg-gray-100">
-                      <Carousel className="w-full h-full" opts={{ loop: true }}>
-                        <CarouselContent>
-                          {module.images.map((image, imageIndex) => (
-                            <CarouselItem key={imageIndex}>
-                              <img 
-                                src={image} 
-                                alt={`${module.name} screenshot ${imageIndex + 1}`}
-                                className="w-full h-48 object-cover"
-                              />
-                            </CarouselItem>
-                          ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="left-2" />
-                        <CarouselNext className="right-2" />
-                      </Carousel>
+                      {module.images.length > 1 ? (
+                        <Carousel className="w-full h-full" opts={{ loop: true }}>
+                          <CarouselContent>
+                            {module.images.map((image, imageIndex) => (
+                              <CarouselItem key={imageIndex}>
+                                <img 
+                                  src={image} 
+                                  alt={`${module.name} screenshot ${imageIndex + 1}`}
+                                  className="w-full h-48 object-cover"
+                                />
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="left-2" />
+                          <CarouselNext className="right-2" />
+                        </Carousel>
+                      ) : (
+                        <img 
+                          src={module.images[0]} 
+                          alt={`${module.name} screenshot`}
+                          className="w-full h-48 object-cover"
+                        />
+                      )}
                     </div>
                     
                     {/* Content */}
