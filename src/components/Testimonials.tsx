@@ -1,5 +1,10 @@
 
+import { useEffect, useRef, useState } from "react";
+
 const Testimonials = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -21,10 +26,37 @@ const Testimonials = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <section ref={sectionRef} className="py-20 bg-white relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-orange-100 to-pink-100 rounded-full opacity-15 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className={`text-center mb-16 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Trusted by Leaders Worldwide
           </h2>
@@ -35,9 +67,18 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div 
+              key={index} 
+              className={`bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-6 hover:rotate-2 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
+              style={{ 
+                transitionDelay: `${(index + 1) * 200}ms`,
+                animation: isVisible ? `scale-in 0.8s ease-out ${(index + 1) * 0.2}s forwards` : ''
+              }}
+            >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4 shadow-lg transform transition-transform duration-300 hover:scale-110">
                   {testimonial.avatar}
                 </div>
                 <div>
