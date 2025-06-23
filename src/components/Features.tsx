@@ -1,4 +1,3 @@
-
 import { Book, Calendar, Star, Users, CheckCircle, Clock } from "lucide-react";
 
 const Features = () => {
@@ -36,7 +35,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="features" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
