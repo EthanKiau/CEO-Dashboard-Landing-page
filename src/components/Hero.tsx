@@ -22,7 +22,7 @@ const Hero = () => {
             <Button size="lg" className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
               Start Your Journey
             </Button>
-            <Button variant="outline" size="lg" className="border-blue-300 text-blue-100 hover:bg-blue-800/50 px-8 py-4 text-lg rounded-full">
+            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-full font-semibold transition-all duration-300">
               View Features
             </Button>
           </div>
