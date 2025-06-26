@@ -154,6 +154,15 @@
   perspective: 1000px;
 }
 
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+/* Enhanced 3D transforms */
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -167,4 +176,18 @@ html {
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Laptop opening animation keyframes */
+@keyframes laptop-open {
+  from {
+    transform: rotateX(-90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.laptop-screen-open {
+  animation: laptop-open 1s ease-out forwards;
 }
