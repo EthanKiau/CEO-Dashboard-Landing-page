@@ -1,6 +1,4 @@
 
-import LaptopAnimation from "./LaptopAnimation";
-
 const ModulesShowcase = () => {
   return (
     <section id="modules" className="py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
@@ -28,14 +26,16 @@ const ModulesShowcase = () => {
           </p>
         </div>
 
-        {/* Laptop Animation with Dashboard Screenshot */}
-        <LaptopAnimation>
-          <img 
-            src="/lovable-uploads/ba65b677-ebcf-4239-9ff6-00fdd3456728.png" 
-            alt="CEO Dashboard Interface showing all modules organized by categories"
-            className="w-full h-full object-cover"
-          />
-        </LaptopAnimation>
+        {/* Dashboard Screenshot */}
+        <div className="flex justify-center">
+          <div className="relative max-w-6xl mx-auto">
+            <img 
+              src="/lovable-uploads/ba65b677-ebcf-4239-9ff6-00fdd3456728.png" 
+              alt="CEO Dashboard Interface showing all modules organized by categories"
+              className="w-full h-auto rounded-2xl shadow-2xl border border-gray-200/50"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
